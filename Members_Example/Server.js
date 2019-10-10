@@ -11,10 +11,10 @@ console.log(`Server up and running on ${PORT}`)
 );
 
 
-// Router for /api/members route
-app.use('/api/members' , require('./Routes/API Routes/memberRouteAPIs'));
-
-
 //Body parser middleware
 app.use(express.json());
 app.use(express.urlencoded({ extended : false }));
+
+// Router for /api/members route
+app.use('/api/members' , require('./Routes/API Routes/memberRouteAPIs'));
+
